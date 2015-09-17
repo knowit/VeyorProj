@@ -1,0 +1,13 @@
+﻿@model VeyorProj.WebApp.Models.VmItemEdit
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Update", "Item"))
+{
+    @Html.EditorFor(x => x)
+    <br />
+    <input type="submit" value="Ok" />
+}

@@ -1,0 +1,23 @@
+﻿@model VeyorProj.WebApp.Models.VmHomeIndex
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Items, yo</h2>
+
+<ul>
+    
+    @{
+        foreach (var item in Model.Items)
+        {
+            <li>
+                @Html.ActionLink(item.name, "Show", "Item", new { @Id = item.rowid }, null) - @Html.ActionLink("Edit", "Edit", "Item", new { @Id = item.rowid }, null)
+            </li>
+        }
+    }
+
+</ul>
+
+<p>Hey!</p>
+
+<p>Also: this!</p>
